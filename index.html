@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <title>DESIRE TRIP</title>
+</head>
+
+<body>
+
+  <div class="content">
+    <!---------------------- Navbar Start ----------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-dark  custom-navbar fixed-top">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/logo.svg" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="navbar-img"></div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto  mb-2 mb-lg-0 " style="margin:0 auto;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#about">How we work</a>
+            </li>
+            <li class="nav-item ms-5 me-5">
+              <a class="nav-link" href="#experience">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#destination">Destination</a>
+            </li>
+          </ul>
+          <form class="d-flex nav-form" role="search">
+            <div class="d-flex">
+              <img width="20px" src="./assets/images/facebook.svg" alt="facebook">
+              <img width="20px" class="mx-4" src="./assets/images/instagram.svg" alt="instagram">
+            </div>
+            <button class="contact-us-btn" type="submit">CONTACT US</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------- Navbar End ----------------------------->
+
+
+
+    <!---------------------- Landing Start -------------------------->
+    <div class="landing">
+      <h2> Dare to live the life <br> you've <span>always <br> wanted</span></h2>
+    </div>
+    <!--------------------- Landing End ---------------------------->
+
+
+
+    <!---------------------- Adventures Start ---------------------->
+
+    <div class="adventure">
+      <div class="adventure-content">
+        <h2>Find the best adventures for you</h2>
+        <p>Choose the destination activities and time frame for your trip Choose the destination activities and time
+          frame for your trip Choose the destination activities and time frame for your trip Choose the destination
+          activities and time frame for your trip Choose the destination activities and time frame for your trip Choose
+          the destination activities and time frame for your trip </p>
+      </div>
+      <div>
+        <form id="search"  class="d-flex justify-content-between align-items-end">
+          <div class="d-flex align-items-center" style="gap: 25px;">
+            <div class="search-item">
+              <h2>Country</h2>
+              <div class="select-input">
+                <img src="assets/images/Location.svg" alt="Landing">
+                <select name="country" id="state1" data-select2-id="Country" class="js-example-basic-multiple select-coutries country"
+                  multiple>
+                </select>
+              </div>
+            </div>
+            <div class="search-item">
+              <h2>Date</h2>
+              <div class="select-input data-picker">
+                <input name="datatime" class="datatime" type="datetime-local" placeholder="When?">
+                <img src="assets/images/Calendar.svg" alt="Calendar">
+              </div>
+            </div>
+            <div class="search-item">
+              <h2>Activities</h2>
+              <div class="select-input">
+                <select name="activity" id="state1" data-select2-id="Activities"
+                  class="js-example-basic-multiple select-coutries activities" multiple>
+                  <option value="Safari">Safari</option>
+                </select>
+                <img src="assets/images/chevron_down.svg" alt="chevron_down">
+              </div>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="search-btn">
+              Search
+              <img src="assets/images/Search.svg" alt="Search">
+            </button>
+          </div>
+        </form>
+        <div class="pt-5 search-card-wrapp">
+          <div class="search-card">
+            <div class="search-default">
+              <span class="search-coutry-name">France, Paris</span>
+              <div class="search-content">
+                <div class="d-flex">
+                  <span>Activities:</span>
+                  <p>Culture, Heritage, Theme Park, Adventure</p>
+                </div>
+                <div class="d-flex">
+                  <span>Time:</span>
+                  <p>Nov-Dec</p>
+                </div>
+              </div>
+            </div>
+            <div class="hover-search">
+              <span>An ancient continent mapped with 54 countries today, Africa is an immense destination with a
+                primeval allure. Begin your exploration with South Africa, Botswana or Zambia on a journey introducing
+                you to unforgettable cultures, cuisines and experiences. Go on safari and witness lion, elephant,
+                giraffe and zebra in their natural habitats, swim on the edge of Victoria Falls, hike to the top of
+                Table Mountain and paddle the waterways of the Okavango Delta. This is iconic Africa at its best.</span>
+              <p>in <span>BOTSWANA, KENYA, SOUTH AFRICA, TANZANIA, ZAMBIA</span></p>
+              <a href="#">Experience this</a>
+            </div>
+          </div>
+          <div class="search-card">
+            <div class="search-default">
+              <span class="search-coutry-name">France, Paris</span>
+              <div class="search-content">
+                <div class="d-flex">
+                  <span>Activities:</span>
+                  <p>Culture, Heritage, Theme Park, Adventure</p>
+                </div>
+                <div class="d-flex">
+                  <span>Time:</span>
+                  <p>Nov-Dec</p>
+                </div>
+              </div>
+            </div>
+            <div class="hover-search">
+              <span>An ancient continent mapped with 54 countries today, Africa is an immense destination with a
+                primeval allure. Begin your exploration with South Africa, Botswana or Zambia on a journey introducing
+                you to unforgettable cultures, cuisines and experiences. Go on safari and witness lion, elephant,
+                giraffe and zebra in their natural habitats, swim on the edge of Victoria Falls, hike to the top of
+                Table Mountain and paddle the waterways of the Okavango Delta. This is iconic Africa at its best.</span>
+              <p>in <span>BOTSWANA, KENYA, SOUTH AFRICA, TANZANIA, ZAMBIA</span></p>
+              <a href="#">Experience this</a>
+            </div>
+          </div>
+          <div class="search-card">
+            <div class="search-default">
+              <span class="search-coutry-name">France, Paris</span>
+              <div class="search-content">
+                <div class="d-flex">
+                  <span>Activities:</span>
+                  <p>Culture, Heritage, Theme Park, Adventure</p>
+                </div>
+                <div class="d-flex">
+                  <span>Time:</span>
+                  <p>Nov-Dec</p>
+                </div>
+              </div>
+            </div>
+            <div class="hover-search">
+              <span>An ancient continent mapped with 54 countries today, Africa is an immense destination with a
+                primeval allure. Begin your exploration with South Africa, Botswana or Zambia on a journey introducing
+                you to unforgettable cultures, cuisines and experiences. Go on safari and witness lion, elephant,
+                giraffe and zebra in their natural habitats, swim on the edge of Victoria Falls, hike to the top of
+                Table Mountain and paddle the waterways of the Okavango Delta. This is iconic Africa at its best.</span>
+              <p>in <span>BOTSWANA, KENYA, SOUTH AFRICA, TANZANIA, ZAMBIA</span></p>
+              <a href="#">Experience this</a>
+            </div>
+          </div>
+          <div class="search-card">
+            <div class="search-default">
+              <span class="search-coutry-name">France, Paris</span>
+              <div class="search-content">
+                <div class="d-flex">
+                  <span>Activities:</span>
+                  <p>Culture, Heritage, Theme Park, Adventure</p>
+                </div>
+                <div class="d-flex">
+                  <span>Time:</span>
+                  <p>Nov-Dec</p>
+                </div>
+              </div>
+            </div>
+            <div class="hover-search">
+              <span>An ancient continent mapped with 54 countries today, Africa is an immense destination with a
+                primeval allure. Begin your exploration with South Africa, Botswana or Zambia on a journey introducing
+                you to unforgettable cultures, cuisines and experiences. Go on safari and witness lion, elephant,
+                giraffe and zebra in their natural habitats, swim on the edge of Victoria Falls, hike to the top of
+                Table Mountain and paddle the waterways of the Okavango Delta. This is iconic Africa at its best.</span>
+              <p>in <span>BOTSWANA, KENYA, SOUTH AFRICA, TANZANIA, ZAMBIA</span></p>
+              <a href="#">Experience this</a>
+            </div>
+
+          </div>
+          <div class="search-card">
+            <div class="search-default">
+              <span class="search-coutry-name">France, Paris</span>
+              <div class="search-content">
+                <div class="d-flex">
+                  <span>Activities:</span>
+                  <p>Culture, Heritage, Theme Park, Adventure</p>
+                </div>
+                <div class="d-flex">
+                  <span>Time:</span>
+                  <p>Nov-Dec</p>
+                </div>
+              </div>
+            </div>
+            <div class="hover-search">
+              <span>An ancient continent mapped with 54 countries today, Africa is an immense destination with a
+                primeval allure. Begin your exploration with South Africa, Botswana or Zambia on a journey introducing
+                you to unforgettable cultures, cuisines and experiences. Go on safari and witness lion, elephant,
+                giraffe and zebra in their natural habitats, swim on the edge of Victoria Falls, hike to the top of
+                Table Mountain and paddle the waterways of the Okavango Delta. This is iconic Africa at its best.</span>
+              <p>in <span>BOTSWANA, KENYA, SOUTH AFRICA, TANZANIA, ZAMBIA</span></p>
+              <a href="#">Experience this</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center pt-5 pb-5">
+          <img src="assets/images/more.svg" alt="more">
+        </div>
+      </div>
+    </div>
+    <!---------------------- Adventures End ---------------------->
+
+
+
+
+
+    <!--------------------- Footer Start ---------------------------->
+
+    <footer class="footer">
+      <div class="footer-social">
+        <img src="./assets/images/logo.svg" alt="logo">
+        <div class="d-flex flex-column align-items-end">
+          <p>
+            Follow us in social media
+          </p>
+          <div class="social-media mt-2">
+            <img src="./assets/images/facebook.svg" alt="facebook">
+            <img class="ms-4" src="./assets/images/instagram.svg" alt="instagram">
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright © 2022 Mfmc Technologies Limited | All right reserved
+        </p>
+        <div class="copyright-links">
+          <a href="#">Terms of service</a>
+          <a href="#" class="ms-5 ps-2">Privacy policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!--------------------- Footer End ---------------------------->
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!--=============== MAIN JS ===============-->
+  <script>
+    flatpickr('.datatime', {
+      disableMobile: "true"
+    });
+  </script>
+  <script src="assets/js/multi-select.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/select.js" type="module"></script>
+</body>
+
+</html>

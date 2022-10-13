@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.content {
+  overflow-x: hidden;
+}
+
+
+/* =================== Custom Scrollbar Start ====================== */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+/* =================== Custom Scrollbar End  ====================== */
+
+/* ================== Navbar Start ======================== */
+
+.navbar-img {
+  background: url('../images/menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
+  width: 20px;
+}
+
+.navbar-img.active {
+  background: url('../images/close.svg');
+}
+
+
+.navbar-dark .navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  color: transparent !important;
+}
+
+
+.custom-navbar {
+  background: #000000 !important;
+  padding-inline: 10%;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff !important;
+}
+
+.contact-us-btn {
+  background: #E58620;
+  border: none;
+  outline: none;
+  padding: 10px 35px;
+  letter-spacing: 0.02em;
+  border-radius: 3px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.contact-us-btn:hover {
+  opacity: 0.9;
+}
+
+/* ================== Navbar End ======================== */
+
+
+
+/* ===================== Landing Start ===================== */
+
+
+.landing {
+  background: url('../../assets/images/landing-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.landing h2 {
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 56px;
+  color: #FFFFFF;
+  font-weight: 200;
+  padding-bottom: 80px;
+  padding-left: 10%;
+}
+
+.landing h2 span {
+  color: #E58620;
+}
+
+/* ===================== Landing End ====================== */
+
+
+/* ======================== Adventures Start ===================== */
+
+.adventure {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-inline: 10%;
+}
+
+.adventure-content {
+  padding-bottom: 50px;
+}
+
+.adventure-content h2 {
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 600;
+}
+
+.adventure-content p {
+  font-size: 16px;
+  opacity: .5;
+}
+
+
+.select-input {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 10px;
+  gap: 5px;
+}
+
+.select-input .select2 {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+  border: none !important;
+}
+
+.data-picker input {
+  border: none !important;
+  outline: none !important;
+  font-weight: 300;
+  padding-block: 4.3px;
+}
+
+.search-btn {
+  border: none;
+  background: #E58620;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  font-weight: 300;
+  padding: 10px 30px;
+  border-radius: 4px;
+
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 300;
+}
+
+.search-item {
+  color: #E58620;
+}
+
+.search-item h2 {
+  font-size: 20px;
+}
+
+.search-card-wrapp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+
+.search-card {
+  display: flex;
+  padding: 20px;
+  background: url('../../assets/images/country-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  position: relative;
+
+}
+
+
+.search-default {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 550px;
+}
+
+.search-coutry-name {
+  color: #fff;
+  font-weight: 300;
+  border-bottom: 1px solid #E58620;
+  width: fit-content;
+  padding-bottom: 3px;
+}
+
+.search-content div {
+  gap: 5px;
+  align-items: flex-start;  
+  color: #fff;
+}
+
+
+
+.search-content div p {
+   width: 70%;
+   font-size: 18px;
+   line-height: 21px;
+   font-weight: 300;
+
+}
+
+.search-content span {
+  font-weight: 600;
+}
+
+.search-content p {
+  color: #fff;
+}
+
+
+.hover-search {
+  margin: 10px;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  height: 90%;
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  transition: all 5s ease-in-out;
+  z-index: 999;
+}
+
+
+
+
+
+.hover-search span {
+  color: #fff;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+
+.hover-search a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  border:2px solid #fff;
+  padding: 5px 10px;
+  opacity: 0.4;
+}
+
+.hover-search p {
+  color: #fff;
+  padding-block: 20px;
+}
+
+.hover-search p span {
+  color: #E58620;
+  text-transform: uppercase;
+}
+
+/* ======================= Adventures End ========================= */
+
+
+/* ==================== Footer Start =============================== */
+
+.footer {
+  background: #000;
+  padding-inline: 8%;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+
+.footer-btn {
+  margin-top: 10px;
+  width: 202px;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.footer-social {
+  padding-top: 100px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #DADADA;
+  position: relative;
+}
+
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+
+.copyright p {
+  color: #DADADA;
+}
+
+.copyright-links a {
+  text-decoration: none;
+  color: #DADADA;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+/* ==================== Footer End =============================== */
+
+/* ===================== Responsive ==================================*/
+
+@media screen and (max-width: 1400px) {
+
+  .footer {
+    padding-inline: 4%;
+
+  }
+
+  .contact-img {
+    top: -280px;
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .custom-navbar {
+    padding-left: 0;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .custom-navbar {
+    padding-inline: 5%;
+  }
+
+  .nav-link {
+    font-size: 15px;
+  }
+
+  .nav-item:nth-child(2) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .navbar-nav {
+    gap: 15px;
+    padding-block: 20px;
+    text-align: center;
+  }
+
+  .nav-form {
+    display: none !important;
+  }
+
+  .footer-input {
+    width: 100%;
+  }
+
+  .copyright {
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+
+  .jn-title {
+    margin-bottom: -50px;
+    margin-top: 50px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .custom-navbar {
+    padding-inline: 0;
+  }
+
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer-inputs div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-btn {
+    width: 100%;
+  }
+
+  .copyright p {
+    font-size: 12px;
+  }
+
+  .footer-social div p {
+    font-size: 12px;
+  }
+}
