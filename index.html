@@ -95,7 +95,7 @@
             <div class="search-item">
               <h2>Date</h2>
               <div class="select-input data-picker">
-                <input name="datatime" class="datatime" type="month" placeholder="When?">
+                <input name="datatime" class="datatime" type="text" placeholder="When?">
                 <img src="assets/images/Calendar.svg" alt="Calendar">
               </div>
             </div>
@@ -176,8 +176,8 @@
     flatpickr(".datatime", {
       plugins: [
         new monthSelectPlugin({
-          dateFormat: "m", //defaults to "F Y"
-          altFormat: "F", //defaults to "F Y"
+          dateFormat: "F", //defaults to "F Y"
+          altFormat: "F"
         }) 
     ]
 });

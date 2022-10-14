@@ -123,7 +123,7 @@ const form = document.getElementById("search");
                 </div>
                 <div class="d-flex">
                   <span>Time:</span>
-                  <p>Nov-Dec</p>
+                  <p>${el.time}</p>
                 </div>
               </div>
             </div>
