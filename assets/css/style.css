@@ -117,6 +117,14 @@ body {
   color: #E58620;
 }
 
+.notfound {
+  display: none;
+}
+
+.notfound.active {
+  display: block;
+}
+
 /* ===================== Landing End ====================== */
 
 
