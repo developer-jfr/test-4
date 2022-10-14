@@ -20,27 +20,6 @@ navbarImg.addEventListener("click", function () {
 //===================== Navbar Close End ==========================
 
 
-// ==================== Load More Start ===============================
-
-let loadMoreBtn = document.querySelector('.loadmore');
-let currentItem = 6;
-
-loadMoreBtn.addEventListener('click', function() {
-  let containers = [...document.querySelectorAll('.search-card')];
-
-  for(let i = currentItem; i < currentItem + 3; i++) {
-    containers[i].style.display = 'inline-block'
-    containers[i]?.setAttribute("style", "display: inline-block;");
-  }
-
-  currentItem += 3;
-
-  if(currentItem >= containers.length) {
-    loadMoreBtn?.setAttribute("style", "display: none;");
-  }
-})
-
-// ==================== Load More Start ===============================
 
 
 
@@ -134,7 +113,7 @@ const form = document.getElementById("search");
             (element) =>  element?.time.includes(searchData.date)
           )
           .forEach(el => {
-            console.log(el+'hhhh')
+            console.log(JSON.stringify(el)+'hhhh')
             let div = ` <div class="search-card">
             <div class="search-default">
               <span class="search-coutry-name">${el.country}</span>
