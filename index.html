@@ -12,11 +12,12 @@
 
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/monthSelect.css">
 
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/flatpickr@latest/dist/plugins/monthSelect/style.css" rel="stylesheet" />
   <title>DESIRE TRIP</title>
 </head>
 
@@ -161,20 +162,25 @@
   </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+ <!-- Optional JavaScript; choose one of the two! -->
+ <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-  <!-- Optional JavaScript; choose one of the two! -->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr@latest/dist/plugins/monthSelect/index.js"></script>
+ 
   <!--=============== MAIN JS ===============-->
   <script>
-    flatpickr('.datatime', {
-      disableMobile: "true"
-    });
+    flatpickr(".datatime", {
+      plugins: [
+        new monthSelectPlugin({
+          dateFormat: "m", //defaults to "F Y"
+          altFormat: "F", //defaults to "F Y"
+        }) 
+    ]
+});
   </script>
   <script src="assets/js/multi-select.js"></script>
   <script src="assets/js/main.js"></script>

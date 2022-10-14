@@ -87,6 +87,8 @@ const form = document.getElementById("search");
       activities: activities.toString(),
     };
 
+    console.log(searchData.date)
+
     if (searchData.country !== '' || searchData.activities !== '' || searchData.date !== '') {
       document.querySelector('.search-card-wrapp').innerHTML='';
 
