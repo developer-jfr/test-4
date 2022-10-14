@@ -24,19 +24,19 @@ navbarImg.addEventListener("click", function () {
 // ==================== Load More Start ===============================
 
 let loadMoreBtn = document.querySelector('.loadmore');
-let currentItem = 3;
+let currentItem = 6;
 
 loadMoreBtn.addEventListener('click', function() {
   let containers = [...document.querySelectorAll('.search-card')];
 
   for(let i = currentItem; i < currentItem + 3; i++) {
-    containers[i].style.display = 'inline-block'
+    containers[i]?.setAttribute("style", "display: inline-block;");
   }
 
   currentItem += 3;
 
   if(currentItem >= containers.length) {
-    loadMoreBtn.style.display = 'none'
+    loadMoreBtn.setAttribute("style", "display: none;");
   }
 })
 
