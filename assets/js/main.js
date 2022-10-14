@@ -20,7 +20,6 @@ navbarImg.addEventListener("click", function () {
 //===================== Navbar Close End ==========================
 
 
-
 // ==================== Load More Start ===============================
 
 let loadMoreBtn = document.querySelector('.loadmore');
@@ -30,17 +29,18 @@ loadMoreBtn.addEventListener('click', function() {
   let containers = [...document.querySelectorAll('.search-card')];
 
   for(let i = currentItem; i < currentItem + 3; i++) {
+    containers[i].style.display = 'inline-block'
     containers[i]?.setAttribute("style", "display: inline-block;");
   }
 
   currentItem += 3;
 
   if(currentItem >= containers.length) {
-    loadMoreBtn.setAttribute("style", "display: none;");
+    loadMoreBtn?.setAttribute("style", "display: none;");
   }
 })
 
-// =================== Load More End ===================================
+// ==================== Load More Start ===============================
 
 
 
@@ -112,7 +112,6 @@ const form = document.getElementById("search");
 
     console.log(searchData.date)
 
-    if (searchData.country !== '' || searchData.activities !== '' || searchData.date !== '') {
       document.querySelector('.search-card-wrapp').innerHTML='';
 
       
@@ -122,20 +121,20 @@ const form = document.getElementById("search");
         // response.json() returns a promise, use the same .then syntax to work with the results
         response.json().then(async function  (elements) {
 
-          let data = [];
           // users is now our actual variable parsed from the json, so we can use it
           elements.filter(
             (element) =>
-              element.country?.includes(searchData.country)
+            element.country?.includes(searchData.country)
           )
           .filter(
             (element) =>
             element.activities?.includes(searchData.activities)
           )
           .filter(
-            (element) =>  element.time?.includes(searchData.date)
+            (element) =>  element?.time.includes(searchData.date)
           )
           .forEach(el => {
+            console.log(el+'hhhh')
             let div = ` <div class="search-card">
             <div class="search-default">
               <span class="search-coutry-name">${el.country}</span>
@@ -163,7 +162,6 @@ const form = document.getElementById("search");
         });
       })
       .catch((err) => console.error(err));
-    } 
   });
 })();
 
