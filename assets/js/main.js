@@ -66,6 +66,26 @@ fetch("assets/data/coutries-card.json")
 
 // ======================= Search Start =========================
 
+
+document.querySelector('.datatime').addEventListener('change', function() {
+  let date = document.querySelector('.datatime')
+  if(date.value === '') {
+    document.getElementById('date').src = 'assets/images/Calendar.svg';
+
+  } else {
+    document.getElementById('date').src = 'assets/images/close2.svg';
+    document.getElementById('date').classList.add('remove');
+    document?.querySelector('.remove')?.addEventListener('click', function() {
+      document.querySelector('.datatime').value = '';
+      document.getElementById('date').src = 'assets/images/Calendar.svg';
+
+    })
+  }
+})
+
+
+
+
 const form = document.getElementById("search");
 
 (function () {
@@ -89,7 +109,7 @@ const form = document.getElementById("search");
       activities: activities.toString(),
     };
 
-    console.log(searchData.date)
+   
 
       document.querySelector('.search-card-wrapp').innerHTML='';
 
@@ -113,7 +133,6 @@ const form = document.getElementById("search");
             (element) =>  element?.time.includes(searchData.date)
           )
           .forEach(el => {
-            console.log(JSON.stringify(el)+'hhhh')
             let div = ` <div class="search-card">
             <div class="search-default">
               <span class="search-coutry-name">${el.country}</span>
