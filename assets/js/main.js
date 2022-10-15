@@ -31,7 +31,7 @@ loadMoreBtn.addEventListener("click", function () {
   }
 
   currentItem += 3;
-  if (currentItem >= containers.length) {
+  if (currentItem > containers.length) {
     loadMoreBtn.setAttribute("style", "display: none;");
   } else {
     loadMoreBtn.setAttribute("style", "display: block;");
@@ -97,7 +97,6 @@ const form = document.getElementById("search");
 
     document.querySelector(".search-card-wrapp").innerHTML = "";
 
-  console.log(searchData.activities)
     fetch("assets/data/coutries-card.json")
       .then(function (response) {
         // response.json() returns a promise, use the same .then syntax to work with the results
@@ -132,7 +131,6 @@ const form = document.getElementById("search");
               }
             )
             .forEach((el, index, array) => {
-              console.log(el)
               let div = ` <div class="search-card">
               <div class="search-default">
                 <span class="search-coutry-name">${el.country}</span>
