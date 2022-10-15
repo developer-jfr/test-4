@@ -40,9 +40,6 @@ loadMoreBtn.addEventListener("click", function () {
 
 // =================== Load More End ===================================
 
-
-
-
 // ======================== Show Elements Start =======================
 
 fetch("assets/data/coutries-card.json")
@@ -81,8 +78,6 @@ fetch("assets/data/coutries-card.json")
 
 // ======================= Search Start =========================
 
-
-
 const form = document.getElementById("search");
 
 (function () {
@@ -91,32 +86,53 @@ const form = document.getElementById("search");
     e.preventDefault();
 
     // Create new FormData object
-    const formData = new FormData(e.target);
-    let countries = $(".country").val().toString();
-    let activities = $(".activities").val().toString();
+    let countries = $(".country").val();
+    let activities = $(".activities").val();
 
     let searchData = {
-      country: countries.toString(),
-      date: $(".datatime").val().toString(),
-      activities: activities.toString(),
+      country: countries,
+      date: $(".datatime").val(),
+      activities: $(".activities").val(),
     };
 
     document.querySelector(".search-card-wrapp").innerHTML = "";
 
-    let data = [];
-
+  console.log(searchData.activities)
     fetch("assets/data/coutries-card.json")
       .then(function (response) {
         // response.json() returns a promise, use the same .then syntax to work with the results
         response.json().then(async function (elements) {
           // users is now our actual variable parsed from the json, so we can use it
           elements
-            .filter((element) => element.country?.includes(searchData.country))
-            .filter((element) =>
-              element.activities?.includes(searchData.activities)
+            .filter(
+              (element) => {
+                if(searchData.country.includes(element.country) ) {
+                  return element
+                } else if (searchData.country.length === 0) {
+                  return element
+                } 
+              }
             )
-            .filter((element) =>  element?.time.includes(searchData.date) && data.push(element))
-            data.forEach(el => {
+            .filter(
+              (element) => {
+                if(searchData.date.includes(element.time) ) {
+                  return element
+                } else if (searchData.date.length === 0) {
+                  return element
+                } 
+              }
+            )
+            .filter(
+              (element) => {
+                if(searchData.activities.includes(element.activities) ) {
+                  return element
+                } else if (searchData.activities.length === 0) {
+                  return element
+                }
+              }
+            )
+            .forEach((el, index, array) => {
+              console.log(el)
               let div = ` <div class="search-card">
               <div class="search-default">
                 <span class="search-coutry-name">${el.country}</span>
@@ -136,31 +152,21 @@ const form = document.getElementById("search");
                 <a href="#">Experience this</a>
               </div>
             </div>`;
-      
-                document
-                  .querySelector(".search-card-wrapp")
-                  .insertAdjacentHTML("beforeend", div);
 
-              if(data.length > 3) {
+              document
+                .querySelector(".search-card-wrapp")
+                .insertAdjacentHTML("beforeend", div);
+
+              if (array.length > 3) {
                 loadMoreBtn.setAttribute("style", "display: block;");
-
-              }  else {
+              } else {
                 loadMoreBtn.setAttribute("style", "display: none;");
-
               }
-            })
-
-
+            });
         });
       })
       .catch((err) => console.error(err));
-
-
-     
   });
 })();
 
 // ======================  Search End ========================
-
-
-
