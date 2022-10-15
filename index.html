@@ -80,11 +80,11 @@
           the destination activities and time frame for your trip </p>
       </div>
       <div>
-        <form id="search"  class="d-flex justify-content-between align-items-end">
-          <div class="d-flex align-items-center" style="gap: 25px;">
+        <form id="search"  class="d-flex justify-content-between align-items-end form-wrapp">
+          <div class="d-flex align-items-center search-wrapp" style="gap: 25px;">
             <div class="search-item">
               <h2>Country</h2>
-              <div class="select-input">
+              <div class="select-input country-wrapp">
                 <img src="assets/images/Location.svg" alt="Landing">
                 <select name="country" id="state1" data-select2-id="Country" class="js-example-basic-multiple select-coutries country"
                   multiple>
@@ -94,8 +94,21 @@
             <div class="search-item">
               <h2>Date</h2>
               <div class="select-input data-picker">
-                <input name="datatime" class="datatime" type="text" placeholder="When?">
-                <img id="date" src="assets/images/Calendar.svg" alt="Calendar">
+                <select name="datatime" id="state1" data-select2-id="Datatime" class="js-example-basic-multiple select-coutries datatime"
+                multiple>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>               
+               <img id="date" src="assets/images/Calendar.svg" alt="Calendar">
               </div>
             </div>
             <div class="search-item">

@@ -159,6 +159,7 @@ body {
   border-radius: 4px;
   padding: 10px;
   gap: 5px;
+  width: 240px;
 }
 
 .select-input .select2 {
@@ -208,6 +209,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
+  transition: 5s;
 }
 
 
@@ -223,6 +225,8 @@ body {
   border-radius: 5px;
   position: relative;
   cursor: pointer;
+  display: none;
+  height: 500px;
 }
 
 .search-card-wrapp div:hover .hover-search {
@@ -239,7 +243,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 550px;
+  height: 100%;
 }
 
 .search-coutry-name {
@@ -287,6 +291,9 @@ body {
     left: 10px;
   transition: all .5s ease-in-out;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 
@@ -331,6 +338,31 @@ body {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+.js-example-basic-multiple {
+  cursor: pointer;
+}
+
+.select-input:nth-child(1) .select2 {
+  width: 400px;
+}
+
+
+.country-wrapp {
+  width: 330px;
+}
+
+.loadmore {
+  cursor: pointer;
+}
+
+
+.search-wrapp {
+  display: flex;
+  gap: 20px;
+}
+
+
 
 /* ======================= Adventures End ========================= */
 
@@ -385,6 +417,17 @@ body {
 /* ===================== Responsive ==================================*/
 
 @media screen and (max-width: 1400px) {
+  .adventure {
+    padding-inline: 5%;
+  }
+
+  .search-card-wrapp {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-card {
+    height: 400px;
+  }
 
   .footer {
     padding-inline: 4%;
@@ -399,6 +442,12 @@ body {
 
 
 @media screen and (max-width: 1200px) {
+  .form-wrapp {
+     flex-direction: column;
+     align-items: initial !important;
+     gap: 40px;
+  }
+
   .custom-navbar {
     padding-left: 0;
   }
@@ -433,6 +482,28 @@ body {
     display: none !important;
   }
 
+  .landing h2 {
+    font-size: 40px;
+  }
+
+  .search-wrapp {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .search-item {
+    width: 100%;
+  }
+
+  .search-card-wrapp {
+    grid-template-columns: 1fr;
+  }
+
+
+  .select-input  {
+    width: 100%;
+  }
+
   .footer-input {
     width: 100%;
   }
@@ -454,6 +525,49 @@ body {
 @media screen and (max-width: 600px) {
   .custom-navbar {
     padding-inline: 0;
+  }
+
+  .search-card {
+    height: 100%;
+  }
+
+
+  .search-default {
+    height: fit-content;
+  }
+
+  .search-card-wrapp div:hover .search-default {
+     opacity: 1;
+  }
+
+  .landing h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .adventure h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .adventure p {
+    font-size: 14px;
+  }
+  
+  .search-item h2 {
+    font-size: 18px;
+  }
+
+  .hover-search {
+    position: initial !important;
+    height: auto;
+    opacity: 1;
+    margin: 0;
+  }
+  
+  .hover-search span {
+    font-size: 12px;
+    padding-bottom: 20px;
   }
 
   .footer {
