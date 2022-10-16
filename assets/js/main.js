@@ -131,7 +131,7 @@ const form = document.getElementById("search");
               }
             )
             .forEach((el, index, array) => {
-              let div = ` <div class="search-card">
+              let div = ` <div class="search-card ">
               <div class="search-default">
                 <span class="search-coutry-name">${el.country}</span>
                 <div class="search-content">

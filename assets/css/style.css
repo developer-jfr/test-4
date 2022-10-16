@@ -229,6 +229,32 @@ body {
   height: 500px;
 }
 
+.search-card:nth-child(2) {
+  background: url('../../assets/images/country-card-2.svg') !important;
+
+}
+
+.search-card:nth-child(3) {
+  background: url('../../assets/images/country-card-3.svg') !important;
+
+}
+
+.search-card:nth-child(4) {
+  background: url('../../assets/images/country-card-3.svg') !important;
+
+}
+
+.search-card:nth-child(5) {
+  background: url('../../assets/images/country-card-5.svg') !important;
+
+}
+
+.search-card:nth-child(6) {
+  background: url('../../assets/images/country-card-1.svg') !important;
+
+}
+
+
 .search-card-wrapp div:hover .hover-search {
   top: 10px;
   opacity: 1;
