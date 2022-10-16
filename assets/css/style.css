@@ -362,9 +362,74 @@ body {
   gap: 20px;
 }
 
+.map {
+  width:100%;
+  height:700px;
+  overflow:hidden;
+  margin-bottom: 60px;
+}
 
+.i4ewOd-pzNkMb-haAclf {
+  display: none !important;
+}
+
+.iframe {
+  width: 100% !important;
+  height: 100%;
+  margin-top:-70px;
+}
 
 /* ======================= Adventures End ========================= */
+
+
+
+/* ==================== Partners Start =============================== */
+
+.partners h2 {
+  white-space: nowrap;
+  text-align: center;
+  padding-top: 50px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 48px;
+  color: #242424;
+}
+
+.partners h2 span {
+  color: #E58620;
+}
+
+.partners-group {
+  padding-top: 80px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-group div {
+  gap: 60px;
+}
+
+.partners-group div img {
+  width: 168px;
+  filter: grayscale(1);
+  transition: .3s;
+}
+
+.partners-group div img:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+}
+
+.vertical-line {
+  height: 160px;
+  width: 1px;
+  background: #EBEBEB;
+}
+
+/* ==================== Partners End =============================== */
+
 
 
 /* ==================== Footer Start =============================== */
@@ -429,6 +494,10 @@ body {
     height: 400px;
   }
 
+  .partners-group div img {
+    width: 140px;
+  }
+
   .footer {
     padding-inline: 4%;
 
@@ -448,6 +517,11 @@ body {
      gap: 40px;
   }
 
+  .partners-group div {
+    gap: 50px;
+   
+   }
+
   .custom-navbar {
     padding-left: 0;
   }
@@ -455,6 +529,8 @@ body {
   .nav-link {
     font-size: 12px;
   }
+
+  
 }
 
 
@@ -520,6 +596,15 @@ body {
     margin-top: 50px;
   }
 
+  .vertical-line {
+    display: none;
+  }
+
+  .partners-group div img {
+    filter: grayscale(0) !important;
+  }
+  
+
 }
 
 @media screen and (max-width: 600px) {
@@ -557,6 +642,38 @@ body {
   .search-item h2 {
     font-size: 18px;
   }
+
+  .map {
+    width:100%;
+    height:350px;
+    overflow:hidden;
+    margin-bottom: 60px;
+  }
+
+
+  
+  
+  .partners h2 {
+    font-size: 30px;
+  }
+
+  .partners-group {
+    padding-bottom: 80px;
+  }
+
+  .pr-images {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partners-group {
+    position: relative;
+  }
+
+  .partners-group div img {
+    width: 140px;
+  }
+  
 
   .hover-search {
     position: initial !important;
