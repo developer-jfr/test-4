@@ -367,6 +367,7 @@ body {
   height:700px;
   overflow:hidden;
   margin-bottom: 60px;
+ 
 }
 
 .i4ewOd-pzNkMb-haAclf {
@@ -377,6 +378,9 @@ body {
   width: 100% !important;
   height: 100%;
   margin-top:-70px;
+  background:transparent; 
+  position:relative; 
+  pointer-events: none;
 }
 
 /* ======================= Adventures End ========================= */
